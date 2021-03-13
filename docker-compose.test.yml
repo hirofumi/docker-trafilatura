@@ -1,0 +1,9 @@
+version: "3"
+
+services:
+  sut:
+    build: .
+    volumes:
+      - ./tests:/tests
+    command: /tests/test.sh
+    entrypoint: ""

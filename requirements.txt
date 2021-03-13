@@ -1,0 +1,1 @@
+trafilatura==0.8.1
