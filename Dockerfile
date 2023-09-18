@@ -1,9 +1,9 @@
-FROM python:3.9.5-alpine3.13
+FROM alpine:3.18
 
 COPY requirements.txt .
 
-RUN apk add --no-cache --virtual .build gcc libc-dev libxml2-dev libxslt-dev \
-    && apk add --no-cache libxml2 libxslt \
+RUN apk add --no-cache --virtual .build py3-pip \
+    && apk add --no-cache py3-lxml python3 \
     && pip3 --no-cache-dir install -r requirements.txt \
     && rm requirements.txt \
     && apk del .build
