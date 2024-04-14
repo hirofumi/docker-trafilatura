@@ -1,1 +1,1 @@
-trafilatura==1.8.0
+trafilatura==1.8.1
